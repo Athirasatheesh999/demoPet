@@ -1,0 +1,17 @@
+{%  extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{pets.img.url}}" width="300" height="300">
+        </div>
+        <div class="col-md-6">
+        <h2>{{pets.name}}</h2>
+        <h5>{{pets.desc}}</h5>
+        <h6>{{pets.price}}</h6>
+            <a class="btn btn-warning" href="{% url 'petsapp:update' pets.id %}">Update</a>
+       <a class="btn btn-danger" href="{% url 'petsapp:delete' pets.id %}">Delete</a>
+    </div>
+    </div>
+</div>
+{% endblock %}
